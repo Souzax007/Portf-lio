@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="logo glow-text" id="logo">Marcos</div>
+    <div class="nav-toggle">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+    <ul class="nav-links">
+        <li><a href="#home" class="glow-link" data-en="Home" data-pt="Início">Home</a></li>
+        <li><a href="#about" class="glow-link" data-en="About" data-pt="Sobre">About</a></li>
+        <li><a href="#projects" class="glow-link" data-en="Projects" data-pt="Projetos">Projects</a></li>
+        <li><a href="#contact" class="glow-link" data-en="Contact" data-pt="Contato">Contact</a></li>
+    </ul>
+    <select id="language-selector" class="language-selector">
+        <option value="en">English</option>
+        <option value="pt">Português</option>
+    </select>
+</nav>
+
+<!-- Home Section -->
+<section id="home" class="home">
+    <div class="particle-background"></div>
+    <div class="content">
+        <h1 class="glitch" data-en="Creative Dev" data-pt="Dev Criativo">Creative Developer</h1>
+        <p class="typing-text" data-en="Welcome to my portfolio!" data-pt="Bem-vindo ao meu portfólio!"></p>
+        <div class="cta-buttons">
+            <a href="#contact" class="glow-button" data-en="Hire Me" data-pt="Contrate-me">Hire Me</a>
+            <a href="#projects" class="glow-button outline" data-en="View Work" data-pt="Ver Trabalhos">View Work</a>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about">
+    <h2 class="section-title glow-text" data-en="About Me" data-pt="Sobre Mim">About Me</h2>
+    <div class="about-content">
+        <div class="about-text">
+            <p data-en="I'm a passionate developer who loves solving problems with technology. My goal is to create intuitive, user-friendly solutions that make a difference." data-pt="Sou um desenvolvedor apaixonado que adora resolver problemas com tecnologia. Meu objetivo é criar soluções intuitivas e fáceis de usar que façam a diferença.">
+                I'm a passionate developer who loves solving problems with technology. My goal is to create intuitive, user-friendly solutions that make a difference.
+            </p>
+        </div>
+        <div class="profile-card" data-tilt>
+            <img src="/img/perfil.png" alt="Profile">
+        </div>
+        <div class="about-text">
+            <p data-en="When I'm not coding, I enjoy learning new frameworks and tools, exploring innovative ideas, and working on side projects that challenge my skills." data-pt="Quando não estou programando, gosto de aprender novos frameworks e ferramentas, explorar ideias inovadoras e trabalhar em projetos paralelos que desafiem minhas habilidades.">
+                When I'm not coding, I enjoy learning new frameworks and tools, exploring innovative ideas, and working on side projects that challenge my skills.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="projects">
+    <h2 class="section-title glow-text" data-en="Projects" data-pt="Projetos">Projects</h2>
+    <div class="filter-buttons">
+        <button class="filter-btn" data-filter="web" data-en="Web" data-pt="Web">Web</button>
+    </div>
+    <div class="projects-grid">
+        <div class="project-card" data-category="web">
+            <img src="/img/pizzaria.png" alt="Project 1">
+            <div class="project-info">
+                <h3 data-en="Pizzeria" data-pt="Pizzaria">Pizzeria</h3>
+                <p data-en="Web Development" data-pt="Desenvolvimento Web" class="P">Web Development</p>
+                <a href="https://souzax007.github.io/Pizzaria/" class="glow-button" data-en="View Project" data-pt="Ver Projeto" target="_blank">View Project</a>
+            </div>
+        </div>
+        <div class="project-card" data-category="web">
+            <img src="/img/menu.png" alt="Project 2">
+            <div class="project-info">
+                <h3 data-en="Cyberpunk Menu" data-pt="Menu-Cyberpunk">Cyberpunk Menu</h3>
+                <p data-en="Web Development" data-pt="Desenvolvimento Web" class="P">Web Development</p>
+                <a href="https://souzax007.github.io/menu/" class="glow-button" data-en="View Project" data-pt="Ver Projeto" target="_blank">View Project</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+    <h2 class="section-title glow-text" data-en="Contact Me" data-pt="Contato">Contact Me</h2>
+    <form id="contact-form" class="contact-form" action="https://formsubmit.co/ajax/marcossouzagg17@gmail.com" method="POST">
+        <div class="form-group">
+            <input type="text" name="nome" 
+                   data-en="Name" 
+                   data-pt="Nome" 
+                   data-en-placeholder="Your Name" 
+                   data-pt-placeholder="Seu Nome" 
+                   placeholder="Nome" required>
+            <span class="focus-border"></span>
+        </div>
+        <div class="form-group">
+            <input type="email" name="email" 
+                   data-en="Email" 
+                   data-pt="Email" 
+                   data-en-placeholder="Your Email" 
+                   data-pt-placeholder="Seu Email" 
+                   placeholder="Email" required>
+            <span class="focus-border"></span>
+        </div>
+        <div class="form-group">
+            <textarea name="mensagem" 
+                      data-en="Enter your message" 
+                      data-pt="Digite sua mensagem" 
+                      data-en-placeholder="Enter your message" 
+                      data-pt-placeholder="Digite sua mensagem" 
+                      required></textarea>
+            <span class="focus-border"></span>
+        </div>
+        <input type="hidden" name="_next" value="https://seusite.com/obrigado.html">
+        <input type="hidden" name="_captcha" value="false">
+        <button type="submit" class="glow-button" data-en="Send Message" data-pt="Enviar Mensagem">Enviar Mensagem</button>
+    </form>
+    <p id="loading" style="display: none;">Enviando...</p>
+    <p id="status"></p>
+</section> 
+
+<!-- Footer Section -->
+<footer class="footer">
+    <p>&copy; 20** SJM Developers. BLA Bla Bla.</p>
+</footer>
+
+<!-- Back to Top Button -->
+<button id="back-to-top" class="back-to-top glow-button">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<script src="script.js"></script>
+<script>
+// Função para traduzir o site
+function translateSite(language) {
+    const elements = document.querySelectorAll('[data-en]');
+    elements.forEach(element => {
+        const enText = element.getAttribute('data-en');
+        const ptText = element.getAttribute('data-pt');
+        if (language === 'pt') {
+            element.innerHTML = ptText;
+            if (element.dataset.ptPlaceholder) {
+                element.placeholder = element.dataset.ptPlaceholder;
+            }
+        } else {
+            element.innerHTML = enText;
+            if (element.dataset.enPlaceholder) {
+                element.placeholder = element.dataset.enPlaceholder;
+            }
+        }
+    });
+}
+
+// Adiciona evento de mudança de idioma
+document.getElementById('language-selector').addEventListener('change', (event) => {
+    const language = event.target.value;
+    translateSite(language);
+});
+
+ document.getElementById("contact-form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Evita recarregar a página
+        
+        var form = this;
+        var statusText = document.getElementById("status");
+        var loadingText = document.getElementById("loading");
+        
+        loadingText.style.display = "block"; // Mostra "Enviando..."
+        statusText.innerHTML = ""; // Limpa mensagens anteriores
+
+        fetch(form.action, {
+            method: form.method,
+            body: new FormData(form),
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(response => {
+            loadingText.style.display = "none"; // Esconde "Enviando..."
+            if (response.ok) {
+                statusText.innerHTML = "Mensagem enviada com sucesso!";
+                form.reset();
+            } else {
+                statusText.innerHTML = "Ocorreu um erro ao enviar a mensagem.";
+            }
+        }).catch(error => {
+            loadingText.style.display = "none"; // Esconde "Enviando..."
+            statusText.innerHTML = "Falha ao conectar ao servidor.";
+        }).finally(() => {
+            loadingText.style.display = "none"; // Sempre esconde "Enviando..."
+        });
+    });
+
+// Traduz para o idioma padrão (Inglês)
+translateSite('en');
+</script>
+</body>
+</html>
